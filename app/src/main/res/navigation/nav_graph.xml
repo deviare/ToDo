@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskFragment">
+
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.todo.ui.task.TaskFragment"
+        android:label="Your tasks"
+        tools:layout="@layout/task_fragment">
+        <action
+            android:id="@+id/action_taskFragment_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_taskFragment_to_alarmActivity"
+            app:destination="@id/alarmActivity" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.example.todo.ui.addEdit.AddEditFragment"
+        android:label="Edit task"
+        tools:layout="@layout/add_edit_fragment">
+
+
+        <argument
+            android:name="task"
+            app:argType="com.example.todo.database.model.TaskModel"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_addEditFragment_to_alarmFragment"
+            app:destination="@id/alarmFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="com.example.todo.ui.alarm.set.AlarmFragment"
+        android:label="Set alarm"
+        tools:layout="@layout/alarm_fragment">
+        <argument
+            android:name="alarm"
+            app:argType="com.example.todo.database.model.AlarmModel"
+            app:nullable="true" />
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+        <argument
+            android:name="message"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <activity
+        android:id="@+id/alarmActivity"
+        android:name="com.example.todo.ui.alarm.triggered.AlarmActivity"
+        android:label="TO DO!" />
+</navigation>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="mark_as_important">Mark as important</string>
+    <string name="new_task">New Task</string>
+</resources>

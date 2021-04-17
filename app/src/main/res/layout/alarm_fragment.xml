@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.alarm.set.AlarmFragment">
+
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layoutMode="clipBounds"
+
+        android:timePickerMode="clock"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ToggleButton
+        android:id="@+id/monday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:textOff="M"
+        android:textOn="M"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/tuesday"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/tuesday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:textOff="T"
+        android:textOn="T"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/wednesday"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/monday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/wednesday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:textOff="W"
+        android:textOn="W"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/thursday"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tuesday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/thursday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:textOff="T"
+        android:textOn="T"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/friday"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/wednesday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/friday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+
+        android:focusable="true"
+        android:textOff="F"
+        android:textOn="F"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/saturday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/thursday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/saturday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:textOff="S"
+        android:textOn="S"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/sunday"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/friday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ToggleButton
+        android:id="@+id/sunday"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:textOff="S"
+        android:textOn="S"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/saturday"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <CheckBox
+        android:id="@+id/repeat_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+
+        app:layout_constraintBottom_toTopOf="@+id/fab_save_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_save_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_save"
+
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_checkbox" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/time_picker" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/repeat_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

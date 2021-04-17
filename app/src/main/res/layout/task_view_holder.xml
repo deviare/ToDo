@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_tasks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="@id/checkbox"
+        app:layout_constraintEnd_toStartOf="@id/alarm_active"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toTopOf="@id/checkbox"
+        tools:text="exampleee" />
+
+
+    <ImageView
+        android:id="@+id/alarm_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alarm_active"
+        app:layout_constraintBottom_toBottomOf="@id/checkbox"
+        app:layout_constraintEnd_toStartOf="@+id/icon_important"
+        app:layout_constraintStart_toEndOf="@id/text_tasks"
+        app:layout_constraintTop_toTopOf="@id/checkbox" />
+
+    <ImageView
+        android:id="@+id/icon_important"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_important"
+
+        app:layout_constraintBottom_toBottomOf="@id/checkbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/alarm_active"
+        app:layout_constraintTop_toTopOf="@id/checkbox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
